@@ -1,0 +1,20 @@
+package util;
+
+public class ListaArray {
+    // CONSTANTES: Sempre definidas com todas as letras maiúsculas. Ao invés de usar uma literal (valor) no código, devemos usar uma constante
+    final public static int TAMANHO_INICIAL = 3;
+    final public static int FATOR_CRESCIMENTO = 5;
+    final public static int NAO_ESTA_PRESENTE = -1;
+
+    // ATRIBUTOS
+    private Object[] arrayInterno;
+    private int numElementos;
+
+    // CONSTRUTOR
+    public ListaArray() {
+        this.numElementos = 0;
+        this.arrayInterno = new Object[TAMANHO_INICIAL];
+    }
+
+    // MÉTODOS (pode adicionar seus métodos aqui conforme a necessidade)
+}
