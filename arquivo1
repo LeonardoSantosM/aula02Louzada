@@ -18,3 +18,22 @@ public class ListaArray {
 
     // MÉTODOS (pode adicionar seus métodos aqui conforme a necessidade)
 }
+private void verificarNecessidadeDeCrescimento() {
+    // Obtendo o tamanho do array referenciado por this.arrayInterno
+    int tamanho = this.arrayInterno.length;
+
+    // Se o tamanho é igual ao número de elementos, significa que o arrayInterno está cheio
+    // Então, precisamos criar um novo array com um tamanho maior
+    if (tamanho == this.numElementos) {
+        // Criação de um array maior
+        Object[] novoArray = new Object[tamanho + FATOR_CRESCIMENTO];
+
+        // Copiando as referências que estão no arrayInterno para o novo array
+        for (int i = 0; i < tamanho; i++) {
+            novoArray[i] = this.arrayInterno[i];
+        }
+
+        // O novo array passa a ser o arrayInterno (o antigo será eliminado pelo garbage collection)
+        this.arrayInterno = novoArray;
+    }
+}
